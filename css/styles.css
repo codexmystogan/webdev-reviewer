@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url('https://i.ibb.co/HpqHcDFv/desktop-bg.jpg');
+    background-image: url('../assets/images/desktop-bg.jpg');
     background-size: cover;
     height: 100vh;
     overflow: hidden;
@@ -9,7 +9,6 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-left: 5%;
-
 }
 
 #access-container {
@@ -70,7 +69,7 @@ body {
 #error-message {
     position: absolute;
     bottom: 80px;
-    left: 130px;
+    left: 160px;
 }
 #error-message.hidden {
     display: none;
@@ -129,7 +128,10 @@ body {
     body {
         justify-content: center; 
         align-items: center; 
+        flex-direction: column;
         padding-left: 0; 
+        height: 100vh;
+        background-image: url('../assets/images/mobile-bg.jpg');
     }
 
     #access-container {
@@ -137,6 +139,7 @@ body {
         height: 400px; 
         padding: 20px; 
     }
+
 
     .quiz-container {
         width: 90%;
@@ -148,6 +151,10 @@ body {
         padding: 8px;
         width: 250px;
     }
+
+    #error-message {
+        left: 115px;
+    } 
 
     h2, h3 {
         font-size: 18px;

@@ -10,18 +10,21 @@ const predefinedHash = "1e8097e9db7ee048ff0ee75322d916bc67d0533f88da7ec655b422ba
 
         document.getElementById("access-code").addEventListener("input", () => {
             document.getElementById("access-code").classList.remove("error");
+            document.getElementById("access-code").style.border = "none";
             document.getElementById("error-message").classList.add("hidden");
         });
 
         async function checkAccess() {
             const accessCodeInput = document.getElementById("access-code");
             const inputCode = accessCodeInput.value;
+            const inputField = document.getElementById("access-code");
         
            
             accessCodeInput.classList.remove("error");
         
             if (!inputCode) {
                 accessCodeInput.classList.add("error", "shake");
+                inputField.style.border = "2px solid red";
                 document.getElementById("error-message").classList.remove("hidden");
                 setTimeout(() => {
                     accessCodeInput.classList.remove("shake");
@@ -51,7 +54,7 @@ const predefinedHash = "1e8097e9db7ee048ff0ee75322d916bc67d0533f88da7ec655b422ba
             // HTML Basics
             { 
                 question: "What does HTML stand for?", 
-                choices: ["Hyper Transfer Markup Language", "Hyper Text Markup Language", "High Tech Machine Learning", "Hyperlink and Text Management Language"], 
+                choices: ["Hyper Transfer Markup Language", "Hyper Text Markup Language", "How To Make Lumpia", "Hyperlink and Text Management Language"], 
                 answer: "Hyper Text Markup Language" 
             },
             { 
@@ -90,9 +93,9 @@ const predefinedHash = "1e8097e9db7ee048ff0ee75322d916bc67d0533f88da7ec655b422ba
                 answer: "required"
             },
             {
-                question: "Which tag is used to define a hyperlink, which is used to link from one page to another?",
-                choices: ["<a>", "<link>", "<href>", "<url>"],
-                answer: "<a>"
+                question: "Which CSS property is used to create a gradient background?",
+                choices: ["background-gradient", "gradient", "linear-gradient", "background-image"],
+                answer: "background-image"
             },
             {
                 question: "What is the correct HTML for making a text input field?",
@@ -152,8 +155,6 @@ const predefinedHash = "1e8097e9db7ee048ff0ee75322d916bc67d0533f88da7ec655b422ba
                 answer: "padding"
             },
 
-
-        
             // JavaScript Basics
             { 
                 question: "Which symbol is used for single-line comments in JavaScript?", 
@@ -324,6 +325,32 @@ const predefinedHash = "1e8097e9db7ee048ff0ee75322d916bc67d0533f88da7ec655b422ba
                 question: "Which JavaScript function is used to fetch data from an API?", 
                 choices: ["getRequest()", "fetch()", "requestAPI()", "sendRequest()"], 
                 answer: "fetch()" 
+            },
+
+            // Situational Questions
+            {
+                question: ". A client says their website’s contact form is not working, but you tested it and it works. What’s the best way to investigate?",
+                choices: [" Tell the client to refresh the page", "Check the server logs", "Check the browser console", "Ask for the browser and device they’re using"],
+                answwer: "Ask for the browser and device they’re using"
+            },
+            {
+                question: "A client asks you to build a website that looks like a popular website. What do you do?",
+                choices: ["Agree to do it and charge extra", "Explain that it’s not ethical to copy", "Ask for permission from the other site owner", "Tell the client it’s not possible"],
+                answer: "Explain that it’s not ethical to copy"
+            },
+            {
+                question: "You are designing a website for a client who wants to target a global audience. What is the best way to handle different languages?",
+                choices: ["Use Google Translate", "Use a language selector", "Create separate websites for each language", "Use a language detection plugin"],
+                answer: "Use a language selector"
+            },
+            {
+                question: "A security researcher reports an XSS vulnerability on your website particularly on the contact form. What do you do?",
+                choices: ["Ignore the report", "Fix the vulnerability immediately", "File a resignation letter", "Report the researcher to the authorities"],
+            },
+            {
+                question: "As a web developer, you are asked by your client to implement a feature that you know is not secure. What do you do?",
+                choices: ["Implement the feature as requested", "Explain the risks to the client", "Ignore the request", "Report the client to the authorities"],
+                answer: "Explain the risks to the client"
             }
         ];
 
