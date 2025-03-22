@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id="access-container">
+        <div class="access-control">
+        <h2 class="title">Web Development 101 Reviewer</h2>
+        <p class="note">Please contact the developer for the access code.</p>
+        <input type="password" class="code-input" id="access-code" placeholder="Enter code">
+        <button onclick="checkAccess()" id="accessBtn">Submit</button>
+        <p id="error-message" class="error hidden">Incorrect Code!</p>
+        </div>
+    </div>
+
+    <div class="quiz-container hidden" id="quiz-container">
+        <h3 id="question-number">Question 1</h3>
+        <h2 id="question">Question goes here</h2>
+        <div class="choices" id="choices"></div>
+        <p>Score: <span id="score">0</span></p>
+        <div id="result" class="hidden">
+            <h2>REVIEW OVER</h2>
+            <p>You got <span id="final-score"></span> correct out of <span id="total-questions"></span></p>
+            <button onclick="location.reload()" id="retry-quiz">Try again</button>
+        </div>
+       
+    </div>
+</body>
+</html>
